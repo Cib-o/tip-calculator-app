@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,54 @@
   <link rel="stylesheet" href="./src/styles.css">
   <title>Tip Calculator App</title>
 </head>
+
 <body>
-  Bill
+  <header>
+    <img class="logo" src="./images/logo.svg" alt="logo">
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <div class="container">
+    <div class="left-side">
+      <h1>Bill</h1>
 
-  Number of People
+      <div class="bill">
+        <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar-icon">
+        <input type="text" placeholder="0">
+      </div>
 
-  Tip Amount
-  / person
+      <h1>Select Tip %</h1>
+      <div class="tip-grid">
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <button>Custom</button>
+      </div>
 
-  Total
-  / person
+      <h1>Number of People</h1>
+      <div class="people-grid">
+        <img src="./images/icon-person.svg" alt="person-icon">
+        <input type="text" placeholder="0">
+      </div>
+    </div>
 
-  Reset
-  
+    <div class="right-side">
+      <h2>Tip Amount <span>/ person</span></h2>
+      <div class="tip-amount">$0.00</div>
+      
+      <h2>Total <span>/ person</span></h2>
+      <div class="total-amount">$0.00</div>
+
+      <button>Reset</button>
+    </div>
+  </div>
+
   <footer>
     Coded by <a href="https://twitter.com/JohnAbashidze" target="_blank">John Abashidze</a>.
   </footer>
 
   <script src="./src/index.js"></script>
 </body>
+
 </html>

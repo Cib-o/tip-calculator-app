@@ -1,0 +1,36 @@
+/** Default Desktop Version **/
+.logo {
+  width: 64px;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 25px;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  display: flex;
+  margin-top: 72px;
+  height: 482px;
+  width: 920px;
+}
+
+.left-side {
+  padding-top: 30px;
+  padding-left: 40px;
+  width: 100%;
+}
+
+.right-side {
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+  margin: 30px;
+  width: 100%;
+}
+
+.total-amount,
+.tip-amount {
+  color: var(--strong-cyan);
+  font-size: 48px;
+  line-height: 71px;
+  letter-spacing: -1px;
+  text-align: right;
+}
