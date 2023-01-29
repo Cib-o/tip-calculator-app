@@ -1,6 +1,6 @@
 /** Default Desktop Version **/
 .logo {
-  width: 64px;
+  width: 84px;
 }
 
 .container {
@@ -9,21 +9,100 @@
   box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
   display: flex;
   margin-top: 72px;
-  height: 482px;
+  height: 502px;
   width: 920px;
+}
+
+@media only screen and (min-height: 600px) and (max-height: 600px) {
+  .container {
+    margin-top: 0px;
+  }
+  
+  footer {
+    margin-top: 0px;
+  }
 }
 
 .left-side {
   padding-top: 30px;
   padding-left: 40px;
-  width: 100%;
+  width: 420px;
+}
+
+.people-grid,
+.bill-grid {
+  align-items: center;
+  display: flex;
+}
+
+.dollar-icon,
+.person-icon {
+  position: absolute;
+  pointer-events: none;
+  margin-left: 14px;
+}
+
+.tip-grid {
+  display: grid;
+  column-gap: 18px;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 18px;
+}
+
+.tip-grid button {
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--very-dark-cyan);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 25px;
+  height: 58px;
+  width: 128px;
+}
+
+.tip-grid button:focus {
+  outline: none;
+}
+
+.tip-grid button:hover {
+  color: var(--very-dark-cyan);
+  background-color: rgba(159, 232, 223, 1);
+}
+
+.custom-tip {
+  color: var(--very-dark-cyan);
+  background-color: var(--very-light-grayish-cyan);
+  padding: 0;
+  padding-right: 14px;
+  height: 58px;
+  width: 114px;
+}
+
+.custom-tip::placeholder {
+  color: var(--dark-grayish-cyan);
+  opacity: 1;
+  text-align: center;
 }
 
 .right-side {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   background-color: var(--very-dark-cyan);
   border-radius: 15px;
-  margin: 30px;
+  margin: 36px;
   width: 100%;
+}
+
+.right-side .row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 86%;
 }
 
 .total-amount,
@@ -33,4 +112,196 @@
   line-height: 71px;
   letter-spacing: -1px;
   text-align: right;
+}
+
+.right-side button {
+  color: var(--very-dark-cyan);
+  cursor: not-allowed;
+  background-color: rgb(13, 104, 109);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 120px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 52px;
+  width: 333px;
+}
+
+/** Tablet Version **/
+@media (max-width: 768px) {
+  .logo {
+    width: 102px;
+  }
+  
+  .container {
+    margin-top: 60px;
+    height: 588px;
+    width: 90%;
+  }
+  
+  .tip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tip-grid button {
+    height: 58px;
+    width: 128px;
+  }
+  
+  .right-side {
+    padding-top: 20px;
+  }
+  
+  .right-side .row {
+    padding-top: 26px;
+  }
+  
+  .right-side button {
+    margin-top: 62%;
+    width: 90%;
+  }
+
+  @media only screen and (min-width: 376px) and (max-width: 740px) {
+    .container {
+      flex-direction: column;
+      margin-top: 30px;
+      height: 788px;
+      width: 90%;
+    }
+
+    .logo {
+      width: 82px;
+    }
+
+    .left-side {
+      width: 90%;
+    }
+    
+    .tip-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 596px) {
+      .container {
+        align-items: center;
+        margin-top: 30px;
+        height: 900px;
+        width: 90%;
+      }
+      
+      .tip-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .left-side {
+        padding-top: 16px;
+        padding-left: 20px;
+      }
+
+      .right-side {
+        height: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .right-side button {
+        margin-top: 100px;
+        width: 90%;
+      }
+    }
+  
+    .tip-grid button {
+      height: 58px;
+      width: 128px;
+    }
+    
+    .right-side {
+      padding-top: 20px;      
+      height: 600px;
+      width: 86%;
+    }
+    
+    .right-side .row {
+      padding-top: 26px;
+    }
+    
+    .right-side button {
+      margin-top: 0px;
+      width: 90%;
+    }
+  }
+}
+
+/** Mobile Version **/
+@media (max-width: 375px) {
+  header {
+    margin-top: 20px;
+  }
+
+  .container {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 28px;
+    height: 830px;
+    width: 100%;
+  }
+
+  .logo {
+    width: 82px;
+  }
+
+  .left-side {
+    width: 90%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .tip-grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .tip-grid button {
+    height: 58px;
+    width: 90%;
+  }
+
+  /* @media only screen and (min-width: 285px) and (max-width: 370px) {
+    .tip-grid button {
+      height: 58px;
+      width: 148px;
+    }
+  } */
+
+  .custom-tip {
+    width: 79%;
+  }
+
+  .right-side {
+    margin: 0;
+    margin-top: 30px;
+    padding-top: 20px;  
+    height: 300px;
+    width: 86%;
+  }
+  
+  .right-side .row {
+    padding-top: 26px;
+  }
+  
+  .right-side button {
+    margin-top: 0px;
+    width: 90%;
+  }
+
+  .total-amount,
+  .tip-amount {
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: -0.66px;
+  }
 }

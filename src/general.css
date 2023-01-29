@@ -7,8 +7,8 @@
   --strong-cyan: rgb(38, 192, 171);
 
   /* Neutral */
-  --very-dark-cyan: rgb(0, 73, 77);
-  --dark-grayish-cyan: rgb(94, 122, 125);
+  --very-dark-cyan: rgb(0, 72, 76);
+  --dark-grayish-cyan: rgb(84, 120, 120);
   --grayish-cyan: rgb(127, 156, 159);
   --light-grayish-cyan: rgb(197, 228, 231);
   --very-light-grayish-cyan: rgb(243, 249, 250);
@@ -28,21 +28,44 @@ body {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   justify-content: center;
-  height: 100%;
+  height: 99%;
 }
 
 input {
   background-color: var(--very-light-grayish-cyan);
   border: none;
+  caret-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+  cursor: pointer;
   font-family: 'Space Mono', monospace;
   font-size: 24px;
   line-height: 36px;
   text-align: right;
+  padding-left: 32px;
+  padding-right: 18px;
+  height: 54px;
+  width: 100%;
+}
+
+input:hover {
+  background-color:rgba(243, 249, 250, 1);
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 input::placeholder {
   opacity: 0.35;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"]:focus {
+  cursor: text;
+  outline-color: var(--strong-cyan);
 }
 
 h1 {
@@ -74,6 +97,36 @@ a:hover {
 
 footer {
   color: var(--very-dark-cyan);
-  font-size: 12px;
-  margin-top: 60px;
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+}
+
+/** Tablet Version **/
+@media (max-width: 768px) {
+  body {
+    padding-top: 20px;
+  }
+
+  @media only screen and (min-width: 376px) and (max-width: 740px) {
+    body {
+      padding-top: 100px;
+    }  
+  }
+
+  @media only screen and (min-width: 376px) and (max-width: 596px) {
+    body {
+      padding-top: 160px;
+    }
+  }
+}
+
+/** Mobile Version **/
+@media (max-width: 375px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 0px;
+    margin: 0;
+  }
 }

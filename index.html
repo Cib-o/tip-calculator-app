@@ -19,9 +19,9 @@
     <div class="left-side">
       <h1>Bill</h1>
 
-      <div class="bill">
+      <div class="bill-grid">
         <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar-icon">
-        <input type="text" placeholder="0">
+        <input type="number" placeholder="0">
       </div>
 
       <h1>Select Tip %</h1>
@@ -31,22 +31,26 @@
         <button>15%</button>
         <button>25%</button>
         <button>50%</button>
-        <button>Custom</button>
+        <input type="number" class="custom-tip" placeholder="Custom">
       </div>
 
       <h1>Number of People</h1>
       <div class="people-grid">
-        <img src="./images/icon-person.svg" alt="person-icon">
-        <input type="text" placeholder="0">
+        <img class="person-icon" src="./images/icon-person.svg" alt="person-icon">
+        <input type="number" placeholder="0">
       </div>
     </div>
 
     <div class="right-side">
-      <h2>Tip Amount <span>/ person</span></h2>
-      <div class="tip-amount">$0.00</div>
-      
-      <h2>Total <span>/ person</span></h2>
-      <div class="total-amount">$0.00</div>
+      <div class="row">
+        <h2>Tip Amount <br><span>/ person</span></h2>
+        <div class="tip-amount">$0.00</div>
+      </div>
+
+      <div class="row">
+        <h2>Total <br><span>/ person</span></h2>
+        <div class="total-amount">$0.00</div>
+      </div>      
 
       <button>Reset</button>
     </div>
