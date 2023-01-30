@@ -34,6 +34,7 @@ body {
 input {
   background-color: var(--very-light-grayish-cyan);
   border: none;
+  border-radius: 5px;
   caret-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
   cursor: pointer;
@@ -45,10 +46,6 @@ input {
   padding-right: 18px;
   height: 54px;
   width: 100%;
-}
-
-input:hover {
-  background-color:rgba(243, 249, 250, 1);
 }
 
 input:focus::placeholder {

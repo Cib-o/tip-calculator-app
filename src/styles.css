@@ -29,6 +29,17 @@
   width: 420px;
 }
 
+.not-allowed {
+  color: rgba(225, 116, 87, 1);
+  display: none;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: -34px;
+  margin-left: 294px;
+  position: absolute;
+  text-align: right;
+}
+
 .people-grid,
 .bill-grid {
   align-items: center;
@@ -142,6 +153,10 @@
     height: 588px;
     width: 90%;
   }
+
+  .not-allowed {
+    margin-left: 168px;
+  }
   
   .tip-grid {
     grid-template-columns: 1fr 1fr;
@@ -180,6 +195,10 @@
     .left-side {
       width: 90%;
     }
+
+    .not-allowed {
+      margin-left: 56%;
+    }
     
     .tip-grid {
       grid-template-columns: 1fr 1fr 1fr;
@@ -200,6 +219,12 @@
       .left-side {
         padding-top: 16px;
         padding-left: 20px;
+      }
+
+      .not-allowed {
+        margin-left: 43%;
+        word-wrap: break-word;
+        width: 30%;
       }
 
       .right-side {
@@ -259,6 +284,13 @@
     width: 90%;
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .not-allowed {
+    margin-top: -46px;
+    margin-left: 58%;
+    word-wrap: break-word;
+    width: 30%;
   }
   
   .tip-grid {

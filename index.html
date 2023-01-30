@@ -18,10 +18,11 @@
   <div class="container">
     <div class="left-side">
       <h1>Bill</h1>
+      <span class="not-allowed">Can&#8217;t be zero</span>
 
       <div class="bill-grid">
         <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar-icon">
-        <input type="number" placeholder="0">
+        <input id="bill" type="number" placeholder="0">
       </div>
 
       <h1>Select Tip %</h1>
@@ -31,28 +32,29 @@
         <button>15%</button>
         <button>25%</button>
         <button>50%</button>
-        <input type="number" class="custom-tip" placeholder="Custom">
+        <input id="custom-tip" type="number" class="custom-tip" placeholder="Custom">
       </div>
 
       <h1>Number of People</h1>
+      <span class="not-allowed">Can&#8217;t be zero</span>
       <div class="people-grid">
         <img class="person-icon" src="./images/icon-person.svg" alt="person-icon">
-        <input type="number" placeholder="0">
+        <input id="number-of-people" type="number" placeholder="0">
       </div>
     </div>
 
     <div class="right-side">
       <div class="row">
         <h2>Tip Amount <br><span>/ person</span></h2>
-        <div class="tip-amount">$0.00</div>
+        <div id="tip-amount" class="tip-amount">$0.00</div>
       </div>
 
       <div class="row">
         <h2>Total <br><span>/ person</span></h2>
-        <div class="total-amount">$0.00</div>
+        <div id="total-amount" class="total-amount">$0.00</div>
       </div>      
 
-      <button>Reset</button>
+      <button id="reset-btn" onclick="reset()" disabled>Reset</button>
     </div>
   </div>
 
